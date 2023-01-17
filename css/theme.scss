@@ -1,0 +1,482 @@
+// Some Margins Class
+@import "mixins";
+@import "variables";
+@import "common";
+body {
+  background: $wcolor;
+  font-family: $theme-font;
+  overflow-x: hidden;
+}
+
+// CSS For Layout
+
+.main-layout {
+  @include flexbox;
+
+  .col-1 {
+    width: 15%;
+    flex: 0 0 auto;
+  }
+  .col-2 {
+    width: 85%;
+    flex: 0 0 auto;
+    padding: 0 15px;
+
+    .content-wrapper {
+      width: 100%;
+    }
+  }
+}
+
+// Mobile Sidebar
+.sidenav {
+  position: sticky;
+  top: 50px;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  .sidenav-header {
+    background: $wcolor;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 15px;
+    text-align: center;
+    text-transform: capitalize;
+  }
+  .sidenav-content {
+    height: 100%;
+    background: $wcolor;
+    .categories-list {
+      li {
+        background-color: transparent;
+        @include box-shadow(none);
+        border: 0;
+        border-top: 1px solid #ddd;
+        @include border-radius(0);
+        margin-bottom: 0;
+        a {
+          display: inline-block;
+          font-size: 14px;
+          padding: 10px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+  .sidenav-overlay {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    @include opacity(0);
+    z-index: -1;
+  }
+}
+
+.show-sidenav {
+  left: 0 !important;
+  @include transition(left, 0.5s, linear);
+
+  .sidenav-overlay {
+    left: 0;
+    @include opacity(1);
+  }
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: $theme-color;
+  @include box-shadow(0 0 4px #666);
+  z-index: 40;
+  .header-content {
+    @include justify-content(space-between);
+  }
+  .sidenav-toggle {
+    display: none;
+    margin-left: 15px;
+    span {
+      display: block;
+      width: 26px;
+      height: 2px;
+      background: $wcolor;
+      margin-top: 4px;
+    }
+  }
+  .logo {
+    img {
+      margin: 0 auto;
+    }
+  }
+  .searchbox-holder {
+    flex: 0.74;
+  }
+  .header-menu {
+    position: relative;
+    padding-right: 15px;
+    a {
+      color: $wcolor;
+      cursor: pointer;
+      font-size: 14px;
+      margin-right: 15px;
+      text-transform: capitalize;
+
+      &:hover {
+        color: #ddd;
+      }
+    }
+    .profile-popup {
+      //position: relative;
+      .profile-icon {
+        @include flexbox;
+        @include align-items(center);
+        @include justify-content(center);
+        width: 25px;
+        height: 25px;
+        background: rgba(255, 255, 255, 0.35);
+        border-radius: 50%;
+        color: $wcolor;
+        cursor: pointer;
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+      .profile-content {
+        position: absolute;
+        top: 40px;
+        right: 0;
+        background: #000;
+        width: 100px;
+        @include opacity(0.5);
+        padding: 10px;
+        visibility: hidden;
+        @include transition(all, 0.3s, linear);
+
+        ul {
+          li {
+            margin-bottom: 5px;
+            a {
+              font-size: 13px;
+            }
+          }
+          li:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      &:hover {
+        .profile-content {
+          top: 30px;
+          @include opacity(1);
+          visibility: visible;
+          @include transition(all, 0.3s, linear);
+        }
+      }
+    }
+    @include transition(all, 0.3s, linear);
+  }
+}
+
+.menu-on-scroll {
+  @include position-fixed;
+  @include animation(slide-down 2s ease);
+}
+
+.scrollup {
+  position: fixed;
+  right: 12px;
+  bottom: 75px;
+  height: 40px;
+  width: 40px;
+  background: $theme-color;
+  border: 0;
+  border-radius: 100%;
+  box-shadow: none;
+  text-align: center;
+  font-size: 25px;
+  color: $wcolor;
+  cursor: pointer;
+  display: none;
+  line-height: 52px;
+  z-index: 9;
+  svg {
+    fill: $wcolor;
+  }
+  &:hover,
+  &:focus {
+    background: $theme-color;
+    @include box-shadow(0 1px 3px rgba(0, 0, 0, 0.3));
+  }
+}
+
+.mini-cart {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  width: 65px;
+  background: $wcolor;
+  @include box-shadow(0 0 16px -1px rgba(0, 0, 0, 0.75));
+  color: $wcolor;
+  cursor: pointer;
+  //@include opacity(0.7);
+  @include transition(all, 0.5s, ease);
+  text-align: center;
+  z-index: 120;
+
+  div {
+    padding: 5px 5px 0 5px;
+  }
+  .cart-count {
+    color: $theme-color;
+    font-size: 12px;
+    font-weight: 600;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    //@include opacity(1);
+    @include transition(all, 0.5s, ease);
+  }
+}
+
+.sidebar-cart-holder {
+  .sidebar-cart {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 350px;
+    height: 100%;
+    background: $wcolor;
+    @include box-shadow(0 0 4px #666);
+    @include transition(right, 0.5s, linear);
+    z-index: 150;
+
+    .cart-header {
+      .count-close {
+        @include justify-content(space-between);
+        padding: 10px;
+
+        .item-count {
+          font-size: 14px;
+          font-weight: 600;
+          text-transform: uppercase;
+        }
+        .sidecart-close-button {
+          cursor: pointer;
+          font-size: 14px;
+        }
+      }
+    }
+    .cart-content {
+      max-height: calc(100vh - 200px);
+      overflow-y: auto;
+      .cart-item {
+        @include flexbox;
+        @include justify-content(space-between);
+        margin-bottom: 10px;
+        padding: 10px;
+
+        .content {
+          margin-left: 10px;
+          a {
+            color: #454545;
+          }
+          p {
+            color: $bcolor;
+            font-size: 13px;
+          }
+          .price {
+            font-weight: 500;
+            margin: 5px 0;
+          }
+          .action {
+            @include flexbox;
+            @include align-items(center);
+            @include justify-content(space-between);
+          }
+          .quantity {
+            border: 1px solid #ddd;
+            @include flexbox;
+            @include align-items(center);
+            @include justify-content(space-between);
+            flex: 0.5;
+            padding: 8px 12px;
+            text-align: center;
+
+            div:not(.input-number) {
+              cursor: pointer;
+            }
+
+            .input-number {
+              font-size: 13px;
+            }
+          }
+        }
+        .remove {
+          cursor: pointer;
+        }
+      }
+    }
+    .cart-footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: $wcolor;
+      border-top: 1px solid #ddd;
+      padding-top: 15px;
+      text-align: center;
+      text-transform: capitalize;
+
+      .subtotal {
+        @include flexbox;
+        @include align-items(center);
+        @include justify-content(space-between);
+        font-weight: 600;
+        margin-bottom: 15px;
+        padding: 0 20px;
+      }
+      .checkout {
+        .block-btn {
+          height: 50px;
+          line-height: 32px;
+        }
+      }
+    }
+  }
+
+  .sidebar-cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    @include opacity(0);
+    @include transition(opacity, 0.5s, linear);
+    z-index: 100;
+  }
+}
+
+.show-sidebar-cart {
+  .sidebar-cart {
+    right: 0;
+    @include transition(right, 0.5s, linear);
+  }
+  .sidebar-cart-overlay {
+    display: block;
+    @include opacity(1);
+    @include transition(opacity, 0.5s, linear);
+  }
+}
+.mobile-search-box {
+  @include position-fixed;
+  background: $wcolor;
+  display: none;
+  padding: 15px 10px;
+  transform: translateY(-100%);
+  @include transition(transform, 0.4s, linear);
+  z-index: 150;
+}
+
+// Custom CSS scrollbar For Search Suggestion
+
+/* width */
+
+.searchbox div::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+
+.searchbox div::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+
+.searchbox div::-webkit-scrollbar-thumb {
+  background: $bcolor;
+}
+
+/* Handle on hover */
+
+.searchbox div::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.searchbox-holder {
+  .searchbox {
+    .input-box {
+      .form-control {
+        height: 35px;
+        width: 70%;
+        border: 1px solid $wcolor;
+        border-radius: 2px;
+        @include box-shadow(none);
+        padding: 10px;
+        &:focus {
+          outline: 0;
+        }
+      }
+      .search-button {
+        margin-left: -30px;
+        button {
+          height: 32px;
+          background: $wcolor;
+          border: 1px solid $wcolor;
+          border-radius: 0;
+          @include box-shadow(none);
+          color: $wcolor;
+          cursor: pointer;
+          font-size: 10px;
+          &:focus {
+            outline: 0;
+          }
+        }
+      }
+      .search-close {
+        display: none;
+      }
+    }
+  }
+}
+
+// **********************************
+
+// CSS For Index Page
+
+.home-collection-slider {
+  .home-collection-slider-header {
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(space-between);
+    padding: 15px;
+
+    .text {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: capitalize;
+    }
+    .link {
+      @extend .text;
+      font-size: 10px;
+      padding: 5px 10px;
+
+      a {
+        color: $bcolor;
+        margin-right: 8px;
+      }
+    }
+  }
+  .home-collection-slider-content {
+    background: rgba(159, 139, 132, 0.05);
+    padding-right: 10px;
+  }
+}
+
+// ************************************

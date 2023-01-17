@@ -1,0 +1,186 @@
+@import "variables";
+
+@import "mixins";
+
+// *********************************************
+
+$phone: "(min-width: 320px) and (max-width: 767px)";
+
+$tablet: "(min-width: 768px) and (max-width: 992px)";
+
+$laptop: "(min-width: 993px) and (max-width: 1200px)";
+
+$desktop: "(min-width: 1201px) and (max-width: 1900px)";
+
+@mixin respond-to($device) {
+  @media only screen and #{$device} {
+    @content;
+  }
+}
+
+@include respond-to($phone) {
+  // Common Style
+  body {
+    overflow-x: hidden;
+  }
+  .content-wrapper {
+    width: 95%;
+  }
+
+  .main-layout {
+    .col-1 {
+      width: 300px;
+    }
+    .col-2 {
+      width: 100%;
+    }
+  }
+
+  .visible-xs {
+    display: block;
+  }
+  .hidden-xs {
+    display: none;
+  }
+
+  // Layout Style
+  .sidenav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: -100%;
+    @include transition(left, 0.5s, linear);
+    z-index: 120;
+
+    .sidenav-header {
+      @include flexbox;
+      @include align-items(center);
+      @include justify-content(space-between);
+    }
+  }
+
+  .header {
+    .sidenav-toggle {
+      display: block;
+    }
+    .header-menu {
+      .profile-popup {
+        .profile-content {
+          width: 145px;
+        }
+      }
+    }
+    .searchbox-holder {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 53px;
+      width: 100%;
+      background: $theme-color;
+      line-height: 53px;
+      padding: 0 10px;
+      z-index: 10;
+      transform: translateY(-100%);
+      @include transition(transform, 0.4s, linear);
+
+      .searchbox {
+        .input-box {
+          @include justify-content(space-evenly);
+          .form-control {
+            width: 85%;
+          }
+          .search-button {
+            margin-left: -45px;
+            button {
+              margin-top: 15px;
+            }
+          }
+          .search-close {
+            color: $wcolor;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  .sidebar-cart-holder {
+    .sidebar-cart {
+      width: 100%;
+    }
+  }
+
+  // Index Page
+}
+
+@include respond-to($tablet) {
+  // Common Style
+  body {
+    overflow-x: hidden;
+  }
+  .content-wrapper {
+    width: 95%;
+  }
+
+  .visible-xs {
+    display: none;
+  }
+
+  // Layout Style
+  .main-layout {
+    .col-1 {
+      width: 22%;
+    }
+    .col-2 {
+      width: 78%;
+    }
+  }
+
+  .searchbox-holder {
+    .searchbox {
+      .input-box {
+        .form-control {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  // Index Page
+}
+
+@include respond-to($laptop) {
+  // Common Style
+  .visible-xs {
+    display: none;
+  }
+  // Layout Style
+  .main-layout {
+    .col-1 {
+      width: 18%;
+    }
+    .col-2 {
+      width: 82%;
+    }
+  }
+
+  .searchbox-holder {
+    .searchbox {
+      .input-box {
+        .form-control {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  // Index Page
+}
+
+@include respond-to($desktop) {
+  // Common Style
+  .visible-xs {
+    display: none;
+  }
+  // Index Page
+}

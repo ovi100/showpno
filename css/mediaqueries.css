@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap");
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  body {
+    overflow-x: hidden;
+  }
+  .content-wrapper {
+    width: 95%;
+  }
+  .main-layout .col-1 {
+    width: 300px;
+  }
+  .main-layout .col-2 {
+    width: 100%;
+  }
+  .visible-xs {
+    display: block;
+  }
+  .hidden-xs {
+    display: none;
+  }
+  .sidenav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: -100%;
+    -webkit-transition: left 0.5s linear;
+    transition: left 0.5s linear;
+    z-index: 120;
+  }
+  .sidenav .sidenav-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
+    justify-content: space-between;
+  }
+  .header .sidenav-toggle {
+    display: block;
+  }
+  .header .header-menu .profile-popup .profile-content {
+    width: 145px;
+  }
+  .header .searchbox-holder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 53px;
+    width: 100%;
+    background: #BA1E1E;
+    line-height: 53px;
+    padding: 0 10px;
+    z-index: 10;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    -webkit-transition: transform 0.4s linear;
+    -webkit-transition: -webkit-transform 0.4s linear;
+    transition: -webkit-transform 0.4s linear;
+    transition: transform 0.4s linear;
+    transition: transform 0.4s linear, -webkit-transform 0.4s linear;
+  }
+  .header .searchbox-holder .searchbox .input-box {
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+  }
+  .header .searchbox-holder .searchbox .input-box .form-control {
+    width: 85%;
+  }
+  .header .searchbox-holder .searchbox .input-box .search-button {
+    margin-left: -45px;
+  }
+  .header .searchbox-holder .searchbox .input-box .search-button button {
+    margin-top: 15px;
+  }
+  .header .searchbox-holder .searchbox .input-box .search-close {
+    color: #ffffff;
+    display: block;
+  }
+  .sidebar-cart-holder .sidebar-cart {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  body {
+    overflow-x: hidden;
+  }
+  .content-wrapper {
+    width: 95%;
+  }
+  .visible-xs {
+    display: none;
+  }
+  .main-layout .col-1 {
+    width: 22%;
+  }
+  .main-layout .col-2 {
+    width: 78%;
+  }
+  .searchbox-holder .searchbox .input-box .form-control {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  .visible-xs {
+    display: none;
+  }
+  .main-layout .col-1 {
+    width: 18%;
+  }
+  .main-layout .col-2 {
+    width: 82%;
+  }
+  .searchbox-holder .searchbox .input-box .form-control {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1201px) and (max-width: 1900px) {
+  .visible-xs {
+    display: none;
+  }
+}
+/*# sourceMappingURL=mediaqueries.css.map */

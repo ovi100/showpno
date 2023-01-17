@@ -1,0 +1,1229 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no">
+
+  <!-- Required CSS -->
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/slick-theme.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/mediaqueries.css">
+
+  <title>Showpno</title>
+</head>
+
+<body>
+
+  <div class="header">
+    <div class="header-content vt-middle-align">
+      <div class="sidenav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="logo">
+        <a href="">
+          <img class="responsive" src="images/logo.jpg" alt="Logo">
+        </a>
+      </div>
+      <div class="searchbox-holder" id="searchbox-holder">
+        <div class="searchbox" id="searchbox">
+          <form>
+            <div class="input-box vt-middle-align">
+              <input type="text" class="form-control search-input">
+              <div class="search-button">
+                <button class="btn btn-default" type="submit">
+                  <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M15.9588 14.1684L11.7088 9.91844C12.5106 8.6747 12.8241 7.17836 12.589 5.71736C12.3538 4.25637 11.5867 2.93395 10.4351 2.00459C9.28353 1.07524 7.82894 0.604615 6.35123 0.683289C4.87353 0.761964 3.47713 1.38438 2.43075 2.43075C1.38438 3.47713 0.761964 4.87353 0.683289 6.35123C0.604615 7.82894 1.07524 9.28353 2.00459 10.4351C2.93395 11.5867 4.25637 12.3538 5.71736 12.589C7.17836 12.8241 8.6747 12.5106 9.91844 11.7088L14.1684 15.9588C14.286 16.0761 14.4255 16.1692 14.579 16.2327C14.7326 16.2961 14.8971 16.3287 15.0632 16.3286C15.2293 16.3285 15.3938 16.2956 15.5472 16.2319C15.7007 16.1683 15.84 16.075 15.9574 15.9574C16.0748 15.8399 16.1679 15.7003 16.2313 15.5468C16.2948 15.3933 16.3274 15.2288 16.3273 15.0627C16.3271 14.8965 16.2943 14.7321 16.2306 14.5786C16.1669 14.4252 16.0736 14.2858 15.9561 14.1684H15.9588ZM2.99094 10.3594C2.26544 9.63127 1.77196 8.70452 1.57279 7.69615C1.37363 6.68778 1.47771 5.643 1.87191 4.69374C2.2661 3.74448 2.93273 2.93331 3.78761 2.36265C4.6425 1.79199 5.6473 1.48743 6.67516 1.48743C7.70301 1.48743 8.70782 1.79199 9.5627 2.36265C10.4176 2.93331 11.0842 3.74448 11.4784 4.69374C11.8726 5.643 11.9767 6.68778 11.7775 7.69615C11.5784 8.70452 11.0849 9.63127 10.3594 10.3594C9.87583 10.8437 9.30154 11.2279 8.66936 11.49C8.03718 11.7522 7.35953 11.8871 6.67516 11.8871C5.99078 11.8871 5.31313 11.7522 4.68095 11.49C4.04878 11.2279 3.47449 10.8437 2.99094 10.3594ZM15.4062 15.4062C15.3628 15.4497 15.3113 15.4842 15.2545 15.5077C15.1978 15.5312 15.137 15.5433 15.0755 15.5433C15.0141 15.5433 14.9533 15.5312 14.8966 15.5077C14.8398 15.4842 14.7883 15.4497 14.7448 15.4062L10.5745 11.2359C10.6914 11.135 11.135 10.7047 11.2359 10.5719L15.4062 14.7316C15.4514 14.7754 15.4873 14.8278 15.5118 14.8858C15.5363 14.9437 15.5489 15.006 15.5489 15.0689C15.5489 15.1318 15.5363 15.1941 15.5118 15.252C15.4873 15.31 15.4514 15.3624 15.4062 15.4062Z"
+                      fill="#312F2F" />
+                  </svg>
+                </button>
+              </div>
+              <div class="search-close">
+                <svg role="presentation" viewBox="0 0 16 14" height="16px" width="16px">
+                  <path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path>
+                </svg>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="header-menu vt-middle-align">
+        <a class="hidden-xs" href="">order history</a>
+        <a class="hidden-xs" href="">request product</a>
+        <a class="visible-xs mobile-search-icon">
+          <svg width="20" height="20" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M15.9588 14.1684L11.7088 9.91844C12.5106 8.6747 12.8241 7.17836 12.589 5.71736C12.3538 4.25637 11.5867 2.93395 10.4351 2.00459C9.28353 1.07524 7.82894 0.604615 6.35123 0.683289C4.87353 0.761964 3.47713 1.38438 2.43075 2.43075C1.38438 3.47713 0.761964 4.87353 0.683289 6.35123C0.604615 7.82894 1.07524 9.28353 2.00459 10.4351C2.93395 11.5867 4.25637 12.3538 5.71736 12.589C7.17836 12.8241 8.6747 12.5106 9.91844 11.7088L14.1684 15.9588C14.286 16.0761 14.4255 16.1692 14.579 16.2327C14.7326 16.2961 14.8971 16.3287 15.0632 16.3286C15.2293 16.3285 15.3938 16.2956 15.5472 16.2319C15.7007 16.1683 15.84 16.075 15.9574 15.9574C16.0748 15.8399 16.1679 15.7003 16.2313 15.5468C16.2948 15.3933 16.3274 15.2288 16.3273 15.0627C16.3271 14.8965 16.2943 14.7321 16.2306 14.5786C16.1669 14.4252 16.0736 14.2858 15.9561 14.1684H15.9588ZM2.99094 10.3594C2.26544 9.63127 1.77196 8.70452 1.57279 7.69615C1.37363 6.68778 1.47771 5.643 1.87191 4.69374C2.2661 3.74448 2.93273 2.93331 3.78761 2.36265C4.6425 1.79199 5.6473 1.48743 6.67516 1.48743C7.70301 1.48743 8.70782 1.79199 9.5627 2.36265C10.4176 2.93331 11.0842 3.74448 11.4784 4.69374C11.8726 5.643 11.9767 6.68778 11.7775 7.69615C11.5784 8.70452 11.0849 9.63127 10.3594 10.3594C9.87583 10.8437 9.30154 11.2279 8.66936 11.49C8.03718 11.7522 7.35953 11.8871 6.67516 11.8871C5.99078 11.8871 5.31313 11.7522 4.68095 11.49C4.04878 11.2279 3.47449 10.8437 2.99094 10.3594ZM15.4062 15.4062C15.3628 15.4497 15.3113 15.4842 15.2545 15.5077C15.1978 15.5312 15.137 15.5433 15.0755 15.5433C15.0141 15.5433 14.9533 15.5312 14.8966 15.5077C14.8398 15.4842 14.7883 15.4497 14.7448 15.4062L10.5745 11.2359C10.6914 11.135 11.135 10.7047 11.2359 10.5719L15.4062 14.7316C15.4514 14.7754 15.4873 14.8278 15.5118 14.8858C15.5363 14.9437 15.5489 15.006 15.5489 15.0689C15.5489 15.1318 15.5363 15.1941 15.5118 15.252C15.4873 15.31 15.4514 15.3624 15.4062 15.4062Z"
+              fill="#fff" />
+          </svg>
+        </a>
+        <div class="profile-popup">
+          <div class="profile-icon">s</div>
+          <div class="profile-content">
+            <ul>
+              <li><a href="">profile</a></li>
+              <li class="visible-xs"><a href="">order history</a></li>
+              <li class="visible-xs"><a href="">request product</a></li>
+              <li><a href="">sign out</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-layout">
+    <div class="col-1 sidenav">
+      <div class="sidenav-header">
+        categories
+        <a class="sidenav-close visible-xs">
+          <svg height="14px" version="1.1" viewBox="0 0 14 14" width="14px">
+            <g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1">
+              <g fill="#000000" id="Core" transform="translate(-341.000000, -89.000000)">
+                <g id="close" transform="translate(341.000000, 89.000000)">
+                  <path
+                    d="M14,1.4 L12.6,0 L7,5.6 L1.4,0 L0,1.4 L5.6,7 L0,12.6 L1.4,14 L7,8.4 L12.6,14 L14,12.6 L8.4,7 L14,1.4 Z"
+                    id="Shape" />
+                </g>
+              </g>
+            </g>
+          </svg>
+        </a>
+      </div>
+      <div class="sidenav-content">
+        <div class="categories-list">
+          <ul>
+            <li><a href="">category link 1</a></li>
+            <li><a href="">category link 2</a></li>
+            <li><a href="">category link 3</a></li>
+            <li><a href="">category link 4</a></li>
+            <li><a href="">category link 5</a></li>
+            <li><a href="">category link 6</a></li>
+            <li><a href="">category link 7</a></li>
+            <li><a href="">category link 8</a></li>
+            <li><a href="">category link 9</a></li>
+            <li><a href="">category link 10</a></li>
+            <li><a href="">category link 11</a></li>
+            <li><a href="">category link 12</a></li>
+            <li><a href="">category link 13</a></li>
+            <li><a href="">category link 14</a></li>
+            <li><a href="">category link 15</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="sidenav-overlay"></div>
+    </div>
+    <div class="col-2">
+      <!-- Start Collection Slider 1 -->
+      <div class="home-collection-slider gap-top">
+        <div class="content-wrapper">
+          <div class="home-collection-slider-header">
+            <div class="text">
+              collection name 1
+            </div>
+            <div class="link">
+              <a href="">view all</a>
+              <svg width="6" height="9" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M5.6451 5.49505L1.34525 9.79476C1.07173 10.0684 0.628259 10.0684 0.35487 9.79476C0.0814579 9.52135 0.0814579 9.0779 0.35487 8.80451L4.15957 4.99993L0.35498 1.19548C0.0815685 0.921955 0.0815685 0.478552 0.35498 0.205141C0.628392 -0.0683805 1.07184 -0.0683805 1.34536 0.205141L5.64521 4.50492C5.78192 4.64169 5.85019 4.82075 5.85019 4.99991C5.85019 5.17915 5.78179 5.35835 5.6451 5.49505Z"
+                  fill="#655D5D" />
+              </svg>
+            </div>
+          </div>
+          <div class="home-collection-slider-content">
+            <div class="collection-slider">
+              <div class="product-box">
+                <div class="photo">
+                  <a href="">
+                    <img class="responsive" src="https://placehold.jp/1000x1000.jpg">
+                  </a>
+                </div>
+                <div class="content">
+                  <div class="price">
+                    <span class="regular-price"><span>&#2547;</span> 14000</span>
+                    <!-- <s class="old-price"><span>&#2547;</span> 15000</s> -->
+                  </div>
+                  <div class="name">
+                    <a href="" class="line-truncate">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing
+                      elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </a>
+                  </div>
+                  <div class="add-to-cart">
+                    <a>
+                      add to cart
+                    </a>
+                    <a>
+                      <select id="quantity" name="quantity">
+                        <option>1kg</option>
+                        <option>2kg</option>
+                        <option>3kg</option>
+                      </select>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="product-box">
+                <div class="photo">
+                  <a href="">
+                    <img class="responsive" src="https://placehold.jp/1000x1000.jpg">
+                  </a>
+                </div>
+                <div class="content">
+                  <div class="price">
+                    <span class="regular-price"><span>&#2547;</span> 14000</span>
+                    <!-- <s class="old-price"><span>&#2547;</span> 15000</s> -->
+                  </div>
+                  <div class="name">
+                    <a href="" class="line-truncate">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing
+                      elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </a>
+                  </div>
+                  <div class="add-to-cart">
+                    <a>
+                      add to cart
+                    </a>
+                    <a>
+                      <select id="quantity" name="quantity">
+                        <option>1kg</option>
+                        <option>2kg</option>
+                        <option>3kg</option>
+                      </select>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="product-box">
+                <div class="photo">
+                  <a href="">
+                    <img class="responsive" src="https://placehold.jp/1000x1000.jpg">
+                  </a>
+                </div>
+                <div class="content">
+                  <div class="price">
+                    <span class="regular-price"><span>&#2547;</span> 14000</span>
+                    <!-- <s class="old-price"><span>&#2547;</span> 15000</s> -->
+                  </div>
+                  <div class="name">
+                    <a href="" class="line-truncate">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing
+                      elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </a>
+                  </div>
+                  <div class="add-to-cart">
+                    <a>
+                      add to cart
+                    </a>
+                    <a>
+                      <select id="quantity" name="quantity">
+                        <option>1kg</option>
+                        <option>2kg</option>
+                        <option>3kg</option>
+                      </select>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="product-box">
+                <div class="photo">
+                  <a href="">
+                    <img class="responsive" src="https://placehold.jp/1000x1000.jpg">
+                  </a>
+                </div>
+                <div class="content">
+                  <div class="price">
+                    <span class="regular-price"><span>&#2547;</span> 14000</span>
+                    <!-- <s class="old-price"><span>&#2547;</span> 15000</s> -->
+                  </div>
+                  <div class="name">
+                    <a href="" class="line-truncate">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing
+                      elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </a>
+                  </div>
+                  <div class="add-to-cart">
+                    <a>
+                      add to cart
+                    </a>
+                    <a>
+                      <select id="quantity" name="quantity">
+                        <option>1kg</option>
+                        <option>2kg</option>
+                        <option>3kg</option>
+                      </select>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="product-box">
+                <div class="photo">
+                  <a href="">
+                    <img class="responsive" src="https://placehold.jp/1000x1000.jpg">
+                  </a>
+                </div>
+                <div class="content">
+                  <div class="price">
+                    <span class="regular-price"><span>&#2547;</span> 14000</span>
+                    <!-- <s class="old-price"><span>&#2547;</span> 15000</s> -->
+                  </div>
+                  <div class="name">
+                    <a href="" class="line-truncate">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing
+                      elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </a>
+                  </div>
+                  <div class="add-to-cart">
+                    <a>
+                      add to cart
+                    </a>
+                    <a>
+                      <select id="quantity" name="quantity">
+                        <option>1kg</option>
+                        <option>2kg</option>
+                        <option>3kg</option>
+                      </select>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="product-box">
+                <div class="photo">
+                  <a href="">
+                    <img class="responsive" src="https://placehold.jp/1000x1000.jpg">
+                  </a>
+                </div>
+                <div class="content">
+                  <div class="price">
+                    <span class="regular-price"><span>&#2547;</span> 14000</span>
+                    <!-- <s class="old-price"><span>&#2547;</span> 15000</s> -->
+                  </div>
+                  <div class="name">
+                    <a href="" class="line-truncate">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing
+                      elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </a>
+                  </div>
+                  <div class="add-to-cart">
+                    <a>
+                      add to cart
+                    </a>
+                    <a>
+                      <select id="quantity" name="quantity">
+                        <option>1kg</option>
+                        <option>2kg</option>
+                        <option>3kg</option>
+                      </select>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="product-box">
+                <div class="photo">
+                  <a href="">
+                    <img class="responsive" src="https://placehold.jp/1000x1000.jpg">
+                  </a>
+                </div>
+                <div class="content">
+                  <div class="price">
+                    <span class="regular-price"><span>&#2547;</span> 14000</span>
+                    <!-- <s class="old-price"><span>&#2547;</span> 15000</s> -->
+                  </div>
+                  <div class="name">
+                    <a href="" class="line-truncate">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing
+                      elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </a>
+                  </div>
+                  <div class="add-to-cart">
+                    <a>
+                      add to cart
+                    </a>
+                    <a>
+                      <select id="quantity" name="quantity">
+                        <option>1kg</option>
+                        <option>2kg</option>
+                        <option>3kg</option>
+                      </select>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="product-box">
+                <div class="photo">
+                  <a href="">
+                    <img class="responsive" src="https://placehold.jp/1000x1000.jpg">
+                  </a>
+                </div>
+                <div class="content">
+                  <div class="price">
+                    <span class="regular-price"><span>&#2547;</span> 14000</span>
+                    <!-- <s class="old-price"><span>&#2547;</span> 15000</s> -->
+                  </div>
+                  <div class="name">
+                    <a href="" class="line-truncate">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing
+                      elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </a>
+                  </div>
+                  <div class="add-to-cart">
+                    <a>
+                      add to cart
+                    </a>
+                    <a>
+                      <select id="quantity" name="quantity">
+                        <option>1kg</option>
+                        <option>2kg</option>
+                        <option>3kg</option>
+                      </select>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Collection Slider 1 -->
+
+      <!-- Start Collection Slider 2 -->
+      <div class="home-collection-slider gap-top">
+        <div class="content-wrapper">
+          <div class="home-collection-slider-header">
+            <div class="text">
+              collection name 2
+            </div>
+            <div class="link">
+              <a href="">view all</a>
+              <svg width="6" height="9" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M5.6451 5.49505L1.34525 9.79476C1.07173 10.0684 0.628259 10.0684 0.35487 9.79476C0.0814579 9.52135 0.0814579 9.0779 0.35487 8.80451L4.15957 4.99993L0.35498 1.19548C0.0815685 0.921955 0.0815685 0.478552 0.35498 0.205141C0.628392 -0.0683805 1.07184 -0.0683805 1.34536 0.205141L5.64521 4.50492C5.78192 4.64169 5.85019 4.82075 5.85019 4.99991C5.85019 5.17915 5.78179 5.35835 5.6451 5.49505Z"
+                  fill="#655D5D" />
+              </svg>
+            </div>
+          </div>
+          <div class="home-collection-slider-content">
+            <div class="collection-slider">
+              <div class="product-box">
+                <div class="photo">
+                  <a href="">
+                    <img class="responsive" src="https://placehold.jp/1000x1000.jpg">
+                  </a>
+                </div>
+                <div class="content">
+                  <div class="price">
+                    <span class="regular-price"><span>&#2547;</span> 14000</span>
+                    <!-- <s class="old-price"><span>&#2547;</span> 15000</s> -->
+                  </div>
+                  <div class="name">
+                    <a href="" class="line-truncate">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing
+                      elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </a>
+                  </div>
+                  <div class="add-to-cart">
+                    <a>
+                      add to cart
+                    </a>
+                    <a>
+                      <select id="quantity" name="quantity">
+                        <option>1kg</option>
+                        <option>2kg</option>
+                        <option>3kg</option>
+                      </select>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="product-box">
+                <div class="photo">
+                  <a href="">
+                    <img class="responsive" src="https://placehold.jp/1000x1000.jpg">
+                  </a>
+                </div>
+                <div class="content">
+                  <div class="price">
+                    <span class="regular-price"><span>&#2547;</span> 14000</span>
+                    <!-- <s class="old-price"><span>&#2547;</span> 15000</s> -->
+                  </div>
+                  <div class="name">
+                    <a href="" class="line-truncate">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing
+                      elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </a>
+                  </div>
+                  <div class="add-to-cart">
+                    <a>
+                      add to cart
+                    </a>
+                    <a>
+                      <select id="quantity" name="quantity">
+                        <option>1kg</option>
+                        <option>2kg</option>
+                        <option>3kg</option>
+                      </select>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="product-box">
+                <div class="photo">
+                  <a href="">
+                    <img class="responsive" src="https://placehold.jp/1000x1000.jpg">
+                  </a>
+                </div>
+                <div class="content">
+                  <div class="price">
+                    <span class="regular-price"><span>&#2547;</span> 14000</span>
+                    <!-- <s class="old-price"><span>&#2547;</span> 15000</s> -->
+                  </div>
+                  <div class="name">
+                    <a href="" class="line-truncate">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing
+                      elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </a>
+                  </div>
+                  <div class="add-to-cart">
+                    <a>
+                      add to cart
+                    </a>
+                    <a>
+                      <select id="quantity" name="quantity">
+                        <option>1kg</option>
+                        <option>2kg</option>
+                        <option>3kg</option>
+                      </select>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="product-box">
+                <div class="photo">
+                  <a href="">
+                    <img class="responsive" src="https://placehold.jp/1000x1000.jpg">
+                  </a>
+                </div>
+                <div class="content">
+                  <div class="price">
+                    <span class="regular-price"><span>&#2547;</span> 14000</span>
+                    <!-- <s class="old-price"><span>&#2547;</span> 15000</s> -->
+                  </div>
+                  <div class="name">
+                    <a href="" class="line-truncate">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing
+                      elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </a>
+                  </div>
+                  <div class="add-to-cart">
+                    <a>
+                      add to cart
+                    </a>
+                    <a>
+                      <select id="quantity" name="quantity">
+                        <option>1kg</option>
+                        <option>2kg</option>
+                        <option>3kg</option>
+                      </select>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="product-box">
+                <div class="photo">
+                  <a href="">
+                    <img class="responsive" src="https://placehold.jp/1000x1000.jpg">
+                  </a>
+                </div>
+                <div class="content">
+                  <div class="price">
+                    <span class="regular-price"><span>&#2547;</span> 14000</span>
+                    <!-- <s class="old-price"><span>&#2547;</span> 15000</s> -->
+                  </div>
+                  <div class="name">
+                    <a href="" class="line-truncate">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing
+                      elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </a>
+                  </div>
+                  <div class="add-to-cart">
+                    <a>
+                      add to cart
+                    </a>
+                    <a>
+                      <select id="quantity" name="quantity">
+                        <option>1kg</option>
+                        <option>2kg</option>
+                        <option>3kg</option>
+                      </select>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="product-box">
+                <div class="photo">
+                  <a href="">
+                    <img class="responsive" src="https://placehold.jp/1000x1000.jpg">
+                  </a>
+                </div>
+                <div class="content">
+                  <div class="price">
+                    <span class="regular-price"><span>&#2547;</span> 14000</span>
+                    <!-- <s class="old-price"><span>&#2547;</span> 15000</s> -->
+                  </div>
+                  <div class="name">
+                    <a href="" class="line-truncate">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing
+                      elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </a>
+                  </div>
+                  <div class="add-to-cart">
+                    <a>
+                      add to cart
+                    </a>
+                    <a>
+                      <select id="quantity" name="quantity">
+                        <option>1kg</option>
+                        <option>2kg</option>
+                        <option>3kg</option>
+                      </select>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="product-box">
+                <div class="photo">
+                  <a href="">
+                    <img class="responsive" src="https://placehold.jp/1000x1000.jpg">
+                  </a>
+                </div>
+                <div class="content">
+                  <div class="price">
+                    <span class="regular-price"><span>&#2547;</span> 14000</span>
+                    <!-- <s class="old-price"><span>&#2547;</span> 15000</s> -->
+                  </div>
+                  <div class="name">
+                    <a href="" class="line-truncate">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing
+                      elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </a>
+                  </div>
+                  <div class="add-to-cart">
+                    <a>
+                      add to cart
+                    </a>
+                    <a>
+                      <select id="quantity" name="quantity">
+                        <option>1kg</option>
+                        <option>2kg</option>
+                        <option>3kg</option>
+                      </select>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="product-box">
+                <div class="photo">
+                  <a href="">
+                    <img class="responsive" src="https://placehold.jp/1000x1000.jpg">
+                  </a>
+                </div>
+                <div class="content">
+                  <div class="price">
+                    <span class="regular-price"><span>&#2547;</span> 14000</span>
+                    <!-- <s class="old-price"><span>&#2547;</span> 15000</s> -->
+                  </div>
+                  <div class="name">
+                    <a href="" class="line-truncate">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing
+                      elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </a>
+                  </div>
+                  <div class="add-to-cart">
+                    <a>
+                      add to cart
+                    </a>
+                    <a>
+                      <select id="quantity" name="quantity">
+                        <option>1kg</option>
+                        <option>2kg</option>
+                        <option>3kg</option>
+                      </select>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Collection Slider 2 -->
+
+      <!-- Start Collection Slider 3 -->
+      <div class="home-collection-slider gap-top">
+        <div class="content-wrapper">
+          <div class="home-collection-slider-header">
+            <div class="text">
+              collection name 3
+            </div>
+            <div class="link">
+              <a href="">view all</a>
+              <svg width="6" height="9" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M5.6451 5.49505L1.34525 9.79476C1.07173 10.0684 0.628259 10.0684 0.35487 9.79476C0.0814579 9.52135 0.0814579 9.0779 0.35487 8.80451L4.15957 4.99993L0.35498 1.19548C0.0815685 0.921955 0.0815685 0.478552 0.35498 0.205141C0.628392 -0.0683805 1.07184 -0.0683805 1.34536 0.205141L5.64521 4.50492C5.78192 4.64169 5.85019 4.82075 5.85019 4.99991C5.85019 5.17915 5.78179 5.35835 5.6451 5.49505Z"
+                  fill="#655D5D" />
+              </svg>
+            </div>
+          </div>
+          <div class="home-collection-slider-content">
+            <div class="collection-slider">
+              <div class="product-box">
+                <div class="photo">
+                  <a href="">
+                    <img class="responsive" src="https://placehold.jp/1000x1000.jpg">
+                  </a>
+                </div>
+                <div class="content">
+                  <div class="price">
+                    <span class="regular-price"><span>&#2547;</span> 14000</span>
+                    <!-- <s class="old-price"><span>&#2547;</span> 15000</s> -->
+                  </div>
+                  <div class="name">
+                    <a href="" class="line-truncate">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing
+                      elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </a>
+                  </div>
+                  <div class="add-to-cart">
+                    <a>
+                      add to cart
+                    </a>
+                    <a>
+                      <select id="quantity" name="quantity">
+                        <option>1kg</option>
+                        <option>2kg</option>
+                        <option>3kg</option>
+                      </select>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="product-box">
+                <div class="photo">
+                  <a href="">
+                    <img class="responsive" src="https://placehold.jp/1000x1000.jpg">
+                  </a>
+                </div>
+                <div class="content">
+                  <div class="price">
+                    <span class="regular-price"><span>&#2547;</span> 14000</span>
+                    <!-- <s class="old-price"><span>&#2547;</span> 15000</s> -->
+                  </div>
+                  <div class="name">
+                    <a href="" class="line-truncate">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing
+                      elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </a>
+                  </div>
+                  <div class="add-to-cart">
+                    <a>
+                      add to cart
+                    </a>
+                    <a>
+                      <select id="quantity" name="quantity">
+                        <option>1kg</option>
+                        <option>2kg</option>
+                        <option>3kg</option>
+                      </select>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="product-box">
+                <div class="photo">
+                  <a href="">
+                    <img class="responsive" src="https://placehold.jp/1000x1000.jpg">
+                  </a>
+                </div>
+                <div class="content">
+                  <div class="price">
+                    <span class="regular-price"><span>&#2547;</span> 14000</span>
+                    <!-- <s class="old-price"><span>&#2547;</span> 15000</s> -->
+                  </div>
+                  <div class="name">
+                    <a href="" class="line-truncate">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing
+                      elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </a>
+                  </div>
+                  <div class="add-to-cart">
+                    <a>
+                      add to cart
+                    </a>
+                    <a>
+                      <select id="quantity" name="quantity">
+                        <option>1kg</option>
+                        <option>2kg</option>
+                        <option>3kg</option>
+                      </select>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="product-box">
+                <div class="photo">
+                  <a href="">
+                    <img class="responsive" src="https://placehold.jp/1000x1000.jpg">
+                  </a>
+                </div>
+                <div class="content">
+                  <div class="price">
+                    <span class="regular-price"><span>&#2547;</span> 14000</span>
+                    <!-- <s class="old-price"><span>&#2547;</span> 15000</s> -->
+                  </div>
+                  <div class="name">
+                    <a href="" class="line-truncate">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing
+                      elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </a>
+                  </div>
+                  <div class="add-to-cart">
+                    <a>
+                      add to cart
+                    </a>
+                    <a>
+                      <select id="quantity" name="quantity">
+                        <option>1kg</option>
+                        <option>2kg</option>
+                        <option>3kg</option>
+                      </select>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="product-box">
+                <div class="photo">
+                  <a href="">
+                    <img class="responsive" src="https://placehold.jp/1000x1000.jpg">
+                  </a>
+                </div>
+                <div class="content">
+                  <div class="price">
+                    <span class="regular-price"><span>&#2547;</span> 14000</span>
+                    <!-- <s class="old-price"><span>&#2547;</span> 15000</s> -->
+                  </div>
+                  <div class="name">
+                    <a href="" class="line-truncate">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing
+                      elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </a>
+                  </div>
+                  <div class="add-to-cart">
+                    <a>
+                      add to cart
+                    </a>
+                    <a>
+                      <select id="quantity" name="quantity">
+                        <option>1kg</option>
+                        <option>2kg</option>
+                        <option>3kg</option>
+                      </select>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="product-box">
+                <div class="photo">
+                  <a href="">
+                    <img class="responsive" src="https://placehold.jp/1000x1000.jpg">
+                  </a>
+                </div>
+                <div class="content">
+                  <div class="price">
+                    <span class="regular-price"><span>&#2547;</span> 14000</span>
+                    <!-- <s class="old-price"><span>&#2547;</span> 15000</s> -->
+                  </div>
+                  <div class="name">
+                    <a href="" class="line-truncate">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing
+                      elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </a>
+                  </div>
+                  <div class="add-to-cart">
+                    <a>
+                      add to cart
+                    </a>
+                    <a>
+                      <select id="quantity" name="quantity">
+                        <option>1kg</option>
+                        <option>2kg</option>
+                        <option>3kg</option>
+                      </select>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="product-box">
+                <div class="photo">
+                  <a href="">
+                    <img class="responsive" src="https://placehold.jp/1000x1000.jpg">
+                  </a>
+                </div>
+                <div class="content">
+                  <div class="price">
+                    <span class="regular-price"><span>&#2547;</span> 14000</span>
+                    <!-- <s class="old-price"><span>&#2547;</span> 15000</s> -->
+                  </div>
+                  <div class="name">
+                    <a href="" class="line-truncate">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing
+                      elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </a>
+                  </div>
+                  <div class="add-to-cart">
+                    <a>
+                      add to cart
+                    </a>
+                    <a>
+                      <select id="quantity" name="quantity">
+                        <option>1kg</option>
+                        <option>2kg</option>
+                        <option>3kg</option>
+                      </select>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="product-box">
+                <div class="photo">
+                  <a href="">
+                    <img class="responsive" src="https://placehold.jp/1000x1000.jpg">
+                  </a>
+                </div>
+                <div class="content">
+                  <div class="price">
+                    <span class="regular-price"><span>&#2547;</span> 14000</span>
+                    <!-- <s class="old-price"><span>&#2547;</span> 15000</s> -->
+                  </div>
+                  <div class="name">
+                    <a href="" class="line-truncate">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing
+                      elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </a>
+                  </div>
+                  <div class="add-to-cart">
+                    <a>
+                      add to cart
+                    </a>
+                    <a>
+                      <select id="quantity" name="quantity">
+                        <option>1kg</option>
+                        <option>2kg</option>
+                        <option>3kg</option>
+                      </select>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Collection Slider 3 -->
+    </div>
+  </div>
+
+  <div class="mobile-search-box">
+    <div class="searchbox-holder" id="searchbox-holder">
+      <div class="searchbox" id="searchbox">
+        <form>
+          <div class="input-group">
+            <input type="text" class="form-control search-input" placeholder="Search by product or collection name">
+            <div class="input-group-btn">
+              <button class="btn btn-default" type="submit">
+                <svg height="25px" width="25px" viewBox="0 0 512 512">
+                  <path
+                    d="M448.3,424.7L335,311.3c20.8-26,33.3-59.1,33.3-95.1c0-84.1-68.1-152.2-152-152.2c-84,0-152,68.2-152,152.2  s68.1,152.2,152,152.2c36.2,0,69.4-12.7,95.5-33.8L425,448L448.3,424.7z M120.1,312.6c-25.7-25.7-39.8-59.9-39.8-96.3  s14.2-70.6,39.8-96.3S180,80,216.3,80c36.3,0,70.5,14.2,96.2,39.9s39.8,59.9,39.8,96.3s-14.2,70.6-39.8,96.3  c-25.7,25.7-59.9,39.9-96.2,39.9C180,352.5,145.8,338.3,120.1,312.6z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sart Sidebar Cart -->
+  <div class="mini-cart">
+    <div class="cart-icon">
+      <img src="images/cart.svg" alt="cart icon">
+    </div>
+    <div class="cart-count">4 <span>items</span></div>
+  </div>
+
+  <div class="sidebar-cart-holder">
+    <div class="sidebar-cart">
+      <div class="cart-header">
+        <div class="count-close vt-middle-align">
+          <div class="item-count">bag</div>
+          <div class="sidecart-close-button">
+            <svg viewBox="0 0 100 100" height="20" width="20">
+              <rect x="19.49" y="46.963" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 121.571 49.0636)"
+                width="62.267" height="5.495" data-reactid=".16dzx1408qq.3.0.1.3.1.4:$express_2192.3.1.0.0"></rect>
+              <rect x="18.575" y="47.876" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 49.062 121.5686)"
+                width="62.268" height="5.495" data-reactid=".16dzx1408qq.3.0.1.3.1.4:$express_2192.3.1.0.1"></rect>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="cart-content">
+        <div class="cart-item">
+          <div class="photo">
+            <a href="">
+              <img class="responsive" src="https://placehold.jp/1000x1000.jpg" alt="Cart Image">
+            </a>
+          </div>
+          <div class="content">
+            <a href="" class="truncate">Lorem ipsum dolor sit amet elit</a>
+            <p>variant option</p>
+            <p class="price">$1024</p>
+            <div class="action">
+              <div class="quantity">
+                <div class="decrease-button">
+                  <svg viewBox="0 0 16 2" height="10" width="10">
+                    <path d="M1,1 L15,1" stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                    </path>
+                  </svg>
+                </div>
+                <div class="input-number">2</div>
+                <div class="increase-button">
+                  <svg viewBox="0 0 16 16" height="10" width="10">
+                    <g stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                      <path d="M8,1 L8,15"></path>
+                      <path d="M1,8 L15,8"></path>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+              <div class="remove">
+                <svg width="16px" height="16px" viewBox="0 0 16 16">
+                  <path fill="#333333"
+                    d="M11.8170504,0.459861217 C12.2588782,0.459861217 12.6170504,0.818033417 12.6170504,1.25986122 L12.6163838,3.36786122 L14.301261,3.36842105 L13.6477197,15.5678574 C13.6431706,15.6527753 13.5729885,15.7192982 13.4879488,15.7192982 L13.4879488,15.7192982 L2.76369591,15.7192982 C2.67865627,15.7192982 2.60847418,15.6527753 2.603925,15.5678574 L2.603925,15.5678574 L1.95038377,3.36842105 L3.63438377,3.36786122 L3.6345943,1.25986122 C3.6345943,0.818033417 3.9927665,0.459861217 4.4345943,0.459861217 L11.8170504,0.459861217 Z M13.288,4.3285193 L2.9632,4.3285193 L3.5216,14.7597193 L12.7296,14.7597193 L13.288,4.3285193 Z M11.6568,1.4192 L4.5944,1.4192 L4.5944,3.368 L11.6568,3.368 L11.6568,1.4192 Z"
+                    id="Combined-Shape" fill-rule="nonzero"></path>
+                  <rect fill="#333333" x="0.266173246" y="3.36842105" width="15.7192982" height="1" rx="0.213333333">
+                  </rect>
+                  <path fill="#333333"
+                    d="M6.66666667,7.2 C6.78448741,7.2 6.88,7.29551259 6.88,7.41333333 L6.88,11.7866667 C6.88,11.9044874 6.78448741,12 6.66666667,12 L6.13333333,12 C6.01551259,12 5.92,11.9044874 5.92,11.7866667 L5.92,7.41333333 C5.92,7.29551259 6.01551259,7.2 6.13333333,7.2 L6.66666667,7.2 Z M9.86666667,7.2 C9.98448741,7.2 10.08,7.29551259 10.08,7.41333333 L10.08,11.7866667 C10.08,11.9044874 9.98448741,12 9.86666667,12 L9.33333333,12 C9.21551259,12 9.12,11.9044874 9.12,11.7866667 L9.12,7.41333333 C9.12,7.29551259 9.21551259,7.2 9.33333333,7.2 L9.86666667,7.2 Z"
+                    id="Combined-Shape" fill="#333333"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cart-item">
+          <div class="photo">
+            <a href="">
+              <img class="responsive" src="https://placehold.jp/1000x1000.jpg" alt="Cart Image">
+            </a>
+          </div>
+          <div class="content">
+            <a href="" class="truncate">Lorem ipsum dolor sit amet elit</a>
+            <p>variant option</p>
+            <p class="price">$1024</p>
+            <div class="action">
+              <div class="quantity">
+                <div class="decrease-button">
+                  <svg viewBox="0 0 16 2" height="10" width="10">
+                    <path d="M1,1 L15,1" stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                    </path>
+                  </svg>
+                </div>
+                <div class="input-number">2</div>
+                <div class="increase-button">
+                  <svg viewBox="0 0 16 16" height="10" width="10">
+                    <g stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                      <path d="M8,1 L8,15"></path>
+                      <path d="M1,8 L15,8"></path>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+              <div class="remove">
+                <svg width="16px" height="16px" viewBox="0 0 16 16">
+                  <g id="wap" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g transform="translate(-343.000000, -291.000000)">
+                      <g transform="translate(0.000000, 195.000000)">
+                        <g id="Group-3" transform="translate(16.000000, 0.000000)">
+                          <g id="ic/18/delete" transform="translate(327.000000, 96.000000)">
+                            <g id="Group-2" fill="#000000" opacity="0">
+                              <rect id="Rectangle" x="0" y="0" width="14.4" height="14.4"></rect>
+                            </g>
+                            <g id="Group" fill="#333333">
+                              <path
+                                d="M11.8170504,0.459861217 C12.2588782,0.459861217 12.6170504,0.818033417 12.6170504,1.25986122 L12.6163838,3.36786122 L14.301261,3.36842105 L13.6477197,15.5678574 C13.6431706,15.6527753 13.5729885,15.7192982 13.4879488,15.7192982 L13.4879488,15.7192982 L2.76369591,15.7192982 C2.67865627,15.7192982 2.60847418,15.6527753 2.603925,15.5678574 L2.603925,15.5678574 L1.95038377,3.36842105 L3.63438377,3.36786122 L3.6345943,1.25986122 C3.6345943,0.818033417 3.9927665,0.459861217 4.4345943,0.459861217 L11.8170504,0.459861217 Z M13.288,4.3285193 L2.9632,4.3285193 L3.5216,14.7597193 L12.7296,14.7597193 L13.288,4.3285193 Z M11.6568,1.4192 L4.5944,1.4192 L4.5944,3.368 L11.6568,3.368 L11.6568,1.4192 Z"
+                                id="Combined-Shape" fill-rule="nonzero"></path>
+                              <rect id="Rectangle" x="0.266173246" y="3.36842105" width="15.7192982" height="1"
+                                rx="0.213333333"></rect>
+                            </g>
+                            <path
+                              d="M6.66666667,7.2 C6.78448741,7.2 6.88,7.29551259 6.88,7.41333333 L6.88,11.7866667 C6.88,11.9044874 6.78448741,12 6.66666667,12 L6.13333333,12 C6.01551259,12 5.92,11.9044874 5.92,11.7866667 L5.92,7.41333333 C5.92,7.29551259 6.01551259,7.2 6.13333333,7.2 L6.66666667,7.2 Z M9.86666667,7.2 C9.98448741,7.2 10.08,7.29551259 10.08,7.41333333 L10.08,11.7866667 C10.08,11.9044874 9.98448741,12 9.86666667,12 L9.33333333,12 C9.21551259,12 9.12,11.9044874 9.12,11.7866667 L9.12,7.41333333 C9.12,7.29551259 9.21551259,7.2 9.33333333,7.2 L9.86666667,7.2 Z"
+                              id="Combined-Shape" fill="#333333"></path>
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cart-item">
+          <div class="photo">
+            <a href="">
+              <img class="responsive" src="https://placehold.jp/1000x1000.jpg" alt="Cart Image">
+            </a>
+          </div>
+          <div class="content">
+            <a href="" class="truncate">Lorem ipsum dolor sit amet elit</a>
+            <p>variant option</p>
+            <p class="price">$1024</p>
+            <div class="action">
+              <div class="quantity">
+                <div class="decrease-button">
+                  <svg viewBox="0 0 16 2" height="10" width="10">
+                    <path d="M1,1 L15,1" stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                    </path>
+                  </svg>
+                </div>
+                <div class="input-number">2</div>
+                <div class="increase-button">
+                  <svg viewBox="0 0 16 16" height="10" width="10">
+                    <g stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                      <path d="M8,1 L8,15"></path>
+                      <path d="M1,8 L15,8"></path>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+              <div class="remove">
+                <svg width="16px" height="16px" viewBox="0 0 16 16">
+                  <g id="wap" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g transform="translate(-343.000000, -291.000000)">
+                      <g transform="translate(0.000000, 195.000000)">
+                        <g id="Group-3" transform="translate(16.000000, 0.000000)">
+                          <g id="ic/18/delete" transform="translate(327.000000, 96.000000)">
+                            <g id="Group-2" fill="#000000" opacity="0">
+                              <rect id="Rectangle" x="0" y="0" width="14.4" height="14.4"></rect>
+                            </g>
+                            <g id="Group" fill="#333333">
+                              <path
+                                d="M11.8170504,0.459861217 C12.2588782,0.459861217 12.6170504,0.818033417 12.6170504,1.25986122 L12.6163838,3.36786122 L14.301261,3.36842105 L13.6477197,15.5678574 C13.6431706,15.6527753 13.5729885,15.7192982 13.4879488,15.7192982 L13.4879488,15.7192982 L2.76369591,15.7192982 C2.67865627,15.7192982 2.60847418,15.6527753 2.603925,15.5678574 L2.603925,15.5678574 L1.95038377,3.36842105 L3.63438377,3.36786122 L3.6345943,1.25986122 C3.6345943,0.818033417 3.9927665,0.459861217 4.4345943,0.459861217 L11.8170504,0.459861217 Z M13.288,4.3285193 L2.9632,4.3285193 L3.5216,14.7597193 L12.7296,14.7597193 L13.288,4.3285193 Z M11.6568,1.4192 L4.5944,1.4192 L4.5944,3.368 L11.6568,3.368 L11.6568,1.4192 Z"
+                                id="Combined-Shape" fill-rule="nonzero"></path>
+                              <rect id="Rectangle" x="0.266173246" y="3.36842105" width="15.7192982" height="1"
+                                rx="0.213333333"></rect>
+                            </g>
+                            <path
+                              d="M6.66666667,7.2 C6.78448741,7.2 6.88,7.29551259 6.88,7.41333333 L6.88,11.7866667 C6.88,11.9044874 6.78448741,12 6.66666667,12 L6.13333333,12 C6.01551259,12 5.92,11.9044874 5.92,11.7866667 L5.92,7.41333333 C5.92,7.29551259 6.01551259,7.2 6.13333333,7.2 L6.66666667,7.2 Z M9.86666667,7.2 C9.98448741,7.2 10.08,7.29551259 10.08,7.41333333 L10.08,11.7866667 C10.08,11.9044874 9.98448741,12 9.86666667,12 L9.33333333,12 C9.21551259,12 9.12,11.9044874 9.12,11.7866667 L9.12,7.41333333 C9.12,7.29551259 9.21551259,7.2 9.33333333,7.2 L9.86666667,7.2 Z"
+                              id="Combined-Shape" fill="#333333"></path>
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cart-item">
+          <div class="photo">
+            <a href="">
+              <img class="responsive" src="https://placehold.jp/1000x1000.jpg" alt="Cart Image">
+            </a>
+          </div>
+          <div class="content">
+            <a href="" class="truncate">Lorem ipsum dolor sit amet elit</a>
+            <p>variant option</p>
+            <p class="price">$1024</p>
+            <div class="action">
+              <div class="quantity">
+                <div class="decrease-button">
+                  <svg viewBox="0 0 16 2" height="10" width="10">
+                    <path d="M1,1 L15,1" stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                    </path>
+                  </svg>
+                </div>
+                <div class="input-number">2</div>
+                <div class="increase-button">
+                  <svg viewBox="0 0 16 16" height="10" width="10">
+                    <g stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                      <path d="M8,1 L8,15"></path>
+                      <path d="M1,8 L15,8"></path>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+              <div class="remove">
+                <svg width="16px" height="16px" viewBox="0 0 16 16">
+                  <g id="wap" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g transform="translate(-343.000000, -291.000000)">
+                      <g transform="translate(0.000000, 195.000000)">
+                        <g id="Group-3" transform="translate(16.000000, 0.000000)">
+                          <g id="ic/18/delete" transform="translate(327.000000, 96.000000)">
+                            <g id="Group-2" fill="#000000" opacity="0">
+                              <rect id="Rectangle" x="0" y="0" width="14.4" height="14.4"></rect>
+                            </g>
+                            <g id="Group" fill="#333333">
+                              <path
+                                d="M11.8170504,0.459861217 C12.2588782,0.459861217 12.6170504,0.818033417 12.6170504,1.25986122 L12.6163838,3.36786122 L14.301261,3.36842105 L13.6477197,15.5678574 C13.6431706,15.6527753 13.5729885,15.7192982 13.4879488,15.7192982 L13.4879488,15.7192982 L2.76369591,15.7192982 C2.67865627,15.7192982 2.60847418,15.6527753 2.603925,15.5678574 L2.603925,15.5678574 L1.95038377,3.36842105 L3.63438377,3.36786122 L3.6345943,1.25986122 C3.6345943,0.818033417 3.9927665,0.459861217 4.4345943,0.459861217 L11.8170504,0.459861217 Z M13.288,4.3285193 L2.9632,4.3285193 L3.5216,14.7597193 L12.7296,14.7597193 L13.288,4.3285193 Z M11.6568,1.4192 L4.5944,1.4192 L4.5944,3.368 L11.6568,3.368 L11.6568,1.4192 Z"
+                                id="Combined-Shape" fill-rule="nonzero"></path>
+                              <rect id="Rectangle" x="0.266173246" y="3.36842105" width="15.7192982" height="1"
+                                rx="0.213333333"></rect>
+                            </g>
+                            <path
+                              d="M6.66666667,7.2 C6.78448741,7.2 6.88,7.29551259 6.88,7.41333333 L6.88,11.7866667 C6.88,11.9044874 6.78448741,12 6.66666667,12 L6.13333333,12 C6.01551259,12 5.92,11.9044874 5.92,11.7866667 L5.92,7.41333333 C5.92,7.29551259 6.01551259,7.2 6.13333333,7.2 L6.66666667,7.2 Z M9.86666667,7.2 C9.98448741,7.2 10.08,7.29551259 10.08,7.41333333 L10.08,11.7866667 C10.08,11.9044874 9.98448741,12 9.86666667,12 L9.33333333,12 C9.21551259,12 9.12,11.9044874 9.12,11.7866667 L9.12,7.41333333 C9.12,7.29551259 9.21551259,7.2 9.33333333,7.2 L9.86666667,7.2 Z"
+                              id="Combined-Shape" fill="#333333"></path>
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cart-footer">
+        <div class="subtotal">
+          <div class="text text-uppercase">subtotal</div>
+          <div class="amount">$5000</div>
+        </div>
+        <div class="checkout">
+          <a href="" class="tbtn btn-solid block-btn">confirm order</a>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar-cart-overlay"></div>
+  </div>
+
+  <div class="scrollup">
+    <svg height="30" viewBox="0 0 512 512" width="30">
+      <polygon points="396.6,352 416,331.3 256,160 96,331.3 115.3,352 256,201.5 " />
+    </svg>
+  </div>
+
+  <!-- Required JavaScript -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery-migrate.js"></script>
+  <script src="js/slick.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>

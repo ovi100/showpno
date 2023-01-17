@@ -1,0 +1,144 @@
+// Start Sass Mixins
+
+@mixin position-sticky {
+  position: sticky;
+  top: 0;
+}
+
+@mixin position-fixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+}
+
+@mixin animation($avalue) {
+  -webkit-animation: #{$avalue};
+  -moz-animation: #{$avalue};
+  -o-animation: #{$avalue};
+  animation: #{$avalue};
+}
+
+@mixin keyframes($aname) {
+  @-webkit-keyframes #{$aname} {
+    @content;
+  }
+  @-o-keyframes #{$aname} {
+    @content;
+  }
+  @-moz-keyframes #{$aname} {
+    @content;
+  }
+  @keyframes #{$aname} {
+    @content;
+  }
+}
+
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin box-shadow($shadows...) {
+  -moz-box-shadow: $shadows;
+  -webkit-box-shadow: $shadows;
+  box-shadow: $shadows;
+}
+
+// Flexbox display
+@mixin flexbox {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+// Inline flex display
+@mixin inline-flex {
+  display: -webkit-inline-box;
+  display: -moz-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+// Align Items
+@mixin align-items($value) {
+  -webkit-box-align: $value;
+  -ms-flex-align: $value;
+  align-items: $value;
+}
+
+// Justify Content
+@mixin justify-content($value) {
+  -webkit-box-pack: $value;
+  -ms-flex-pack: $value;
+  justify-content: $value;
+}
+
+// Flex Direction
+@mixin flex-direction($value) {
+  -webkit-flex-direction: $value;
+  flex-direction: $value;
+}
+
+// Flex Wrap
+@mixin flex-wrap($value) {
+  -ms-flex-wrap: $value;
+  flex-wrap: $value;
+}
+
+@mixin opacity($value) {
+  $IEValue: $value * 100;
+  opacity: $value;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" + $IEValue +
+    ")";
+  filter: alpha(opacity=$IEValue);
+}
+
+@mixin placeholder {
+  &.placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-webkit-input-placeholder {
+    @content;
+  }
+}
+
+@mixin scale($svalue) {
+  @include transform(scale($svalue));
+}
+
+@mixin rotate($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+
+@mixin transition($property, $time, $effect) {
+  -webkit-transition: $property $time $effect;
+  -moz-transition: $property $time $effect;
+  -ms-transition: $property $time $effect;
+  -o-transition: $property $time $effect;
+  transition: $property $time $effect;
+}
+
+@mixin transform($transforms) {
+  -webkit-transform: $transforms;
+  -moz-transform: $transforms;
+  -o-transform: $transforms;
+  -ms-transform: $transforms;
+  transform: $transforms;
+}
+
+@mixin translate($x, $y) {
+  @include transform(translate($x, $y));
+}
+
+// *********************************************
